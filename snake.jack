@@ -11,12 +11,14 @@ class Snake {
 	}
 	
 	method void draw() {
-		var i = 1;
-		Screen.setColor(true);
+		var int i;
+		let i = 1;
+		do Screen.setColor(true);
 		while (i < (length + 1)) {
-			Screen.drawRectangle(x, y, x + multiply(10, i), y + multiply(10, i));
+			do Screen.drawRectangle(x, y, x + Math.multiply(10, i), y + Math.multiply(10, i));
+			let i = i + 1;
 		}
-		do Keyboard.readChar();
+		return;
 	}
 	
 	method void dispose() {

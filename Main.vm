@@ -1,0 +1,10 @@
+function Main.main 1
+call Snake.new 0
+pop local 0
+call Keyboard.readChar 0
+pop temp 0
+push local 0
+call Snake.dispose 1
+pop temp 0
+push constant 0
+return
