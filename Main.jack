@@ -1,0 +1,9 @@
+class Main {
+	function void main() {
+		var Snake snake;
+		let snake = Snake.new();
+		do Keyboard.readChar();
+		do snake.dispose();
+		return;
+	}
+}

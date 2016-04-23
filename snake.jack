@@ -1,2 +1,23 @@
-hi
-hi123
+class Snake {
+	field int length; 	//length of the snake
+	field int x, y;  	//head of the snake
+	
+	constructor Snake new() {
+		let length = 5;
+		let x = 150;
+		let y = 100;
+		do draw();
+		return this;
+	}
+	
+	method void draw() {
+		do Screen.setColor(true);
+		do Screen.drawRectangle(x, y, x + Math.multiply(10, length), y+5);
+		return;
+	}
+	
+	method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+}
