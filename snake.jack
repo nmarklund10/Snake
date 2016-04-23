@@ -1,13 +1,23 @@
 class Snake {
 	field int length; 	//length of the snake
 	field int x, y;  	//head of the snake
+	field string dot;	//direction of travel.
+	field Array body = Array new(length);	//Stores coordinates for body segments.
+	//This is essential, right? Is there a more efficient way?
 	
 	constructor Snake new() {
 		let length = 5;
 		let x = 150;
 		let y = 100;
+		let dot = "left";
 		do draw();
 		return this;
+	}
+	
+	method void move(){
+		//Add or subtract from x or y depending on the currect direction of travel.
+		
+		return;
 	}
 	
 	method void draw() {
