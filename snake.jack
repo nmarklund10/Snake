@@ -1,9 +1,11 @@
 class Snake {
 	field int length; 	//length of the snake
 	field int x, y;  	//head of the snake
+	field Array body;
 	
 	constructor Snake new() {
 		let length = 5;
+		let body = Array.new(length);
 		let x = 150;
 		let y = 100;
 		do draw();
@@ -11,8 +13,12 @@ class Snake {
 	}
 	
 	method void draw() {
+		var int i = 0;
 		do Screen.setColor(true);
-		do Screen.drawRectangle(x, y, x + Math.multiply(10, length), y+5);
+		while (i < length) {
+			do Screen.drawRectangle(x, y, x + 10, y+5);
+			
+		}
 		return;
 	}
 	
