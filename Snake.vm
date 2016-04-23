@@ -13,43 +13,25 @@ call Snake.draw 1
 pop temp 0
 push pointer 0
 return
-function Snake.draw 1
+function Snake.draw 0
 push argument 0
 pop pointer 0
-push constant 1
-pop local 0
 push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-label WHILE_EXP0
-push local 0
+push this 1
+push this 2
+push this 1
+push constant 10
 push this 0
-push constant 1
-add
-lt
-not
-if-goto WHILE_END0
-push this 1
-push this 2
-push this 1
-push constant 10
-push local 0
 call Math.multiply 2
 add
 push this 2
-push constant 10
-push local 0
-call Math.multiply 2
+push constant 5
 add
 call Screen.drawRectangle 4
 pop temp 0
-push local 0
-push constant 1
-add
-pop local 0
-goto WHILE_EXP0
-label WHILE_END0
 push constant 0
 return
 function Snake.dispose 0
